@@ -104,6 +104,7 @@
               <a class="nav_tag" itemprop="author" href="#methodology">Methodology | </a>
               <a class="nav_tag" itemprop="author" href="#datasets">Datasets | </a>
               <a class="nav_tag" itemprop="author" href="#important-dates">Important Dates | </a>
+              <a class="nav_tag" itemprop="author" href="#evaluation-measures">Evaluation Measures</a>
               <a class="nav_tag" itemprop="author" href="#organisers">Organisers</a>
             <h3 class="post-subtitle" style="padding-top: 20%">Looking for your participation!👏</h3>
               <div class="cf post-meta-text" >
@@ -190,7 +191,16 @@
 <span class="event"><strong>NTCIR-18 Conference</strong>:</span> <span class="date">Jun 10-13 2025</span><br />
 
 <h2 id="evaluation-measures">Evaluation Measures</h2>
-
+<ul>
+  <li><strong>Acc(Accuracy): </strong>: The proportion of identical preference results between the model and human annotations. Specifically, we first convert individual scores (ranks) into pairwise preferences and then calculate consistency with human annotations.</li>
+  <li><strong>Kendall's tau: </strong>: Measures the ordinal association between two ranked variables. $$\tau = \frac{C-D}{\frac{1}{2}n(n-1)}$$, where:
+    C is the number of concordant pairs.
+    D is the number of discordant pairs.
+    n is the number of pairs.</li>
+  <li><strong>Spearman's Rank Correlation Coefficient </strong>: Measures the strength and direction of the association between two ranked variables. $$\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}$$，where:
+    d_i is the difference between the ranks of corresponding elements in the two lists.
+    n is the number of elements.</li>
+</ul>
 
 <h2 id="data-and-file-format">Data and File format</h2>
 
