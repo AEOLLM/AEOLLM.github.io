@@ -104,8 +104,8 @@
               <a class="nav_tag" itemprop="author" href="#methodology">Methodology | </a>
               <a class="nav_tag" itemprop="author" href="#datasets">Datasets | </a>
               <a class="nav_tag" itemprop="author" href="#important-dates">Important Dates | </a>
-              <a class="nav_tag" itemprop="author" href="#evaluation-measures">Evaluation Measures</a>
-              <a class="nav_tag" itemprop="author" href="#data-and-file-format">Data and File format</a>
+              <a class="nav_tag" itemprop="author" href="#evaluation-measures">Evaluation Measures | </a>
+              <a class="nav_tag" itemprop="author" href="#data-and-file-format">Data and File format | </a>
               <a class="nav_tag" itemprop="author" href="#organisers">Organisers</a>
             <h3 class="post-subtitle" style="padding-top: 20%">Looking for your participation!👏</h3>
               <div class="cf post-meta-text" >
@@ -173,12 +173,14 @@
 </ol>
 
 <h2 id="datasets">Datasets</h2>
+<p>A brief description of the specific dataset we used, along with the original download link, is provided below:</p>
 <ul>
   <li><strong>Summary Generation (SG): <a href="https://huggingface.co/datasets/EdinburghNLP/xsum">Xsum</a></strong>: A real-world single document news summary dataset collected from online articles by the British Broadcasting Corporation (BBC) and contains over 220 thousand news documents.</li>
-  <li><strong>Non-Factoid QA (NFQA): <a href="https://github.com/Lurunchik/NF-CATS">NF_CATS</a></strong>: A dataset contains exam_x0002_ples of 12k natural questions divided into eight categories.</li>
+  <li><strong>Non-Factoid QA (NFQA): <a href="https://github.com/Lurunchik/NF-CATS">NF_CATS</a></strong>: A dataset contains examples of 12k natural questions divided into eight categories.</li>
   <li><strong>Text Expansion (TE): <a href="https://huggingface.co/datasets/euclaise/writingprompts">WritingPrompts</a></strong>: A large dataset of 300K human-written stories paired with writing prompts from an online forum.</li>
   <li><strong>Dialogue Generation (DG): <a href="https://huggingface.co/datasets/daily_dialog">DailyDialog</a></strong>: A high-quality dataset of 13k multi-turn dialogues. The language is human-written and less noisy.</li>
 </ul>
+<p>For your convenience, we have released <strong>the training set</strong> (with human-annotated results) and <strong>the test set</strong> (without human-annotated results) on <a href="https://huggingface.co/datasets/THUIR/AEOLLM">https://huggingface.co/datasets/THUIR/AEOLLM</a>, which you can easily download.</p>
 
 <h2 id="important-dates">Important Dates</h2>
 <p><em>All deadlines are at 11:59pm in the Anywhere on Earth (AOE) timezone.</em><br />
@@ -193,13 +195,13 @@
 
 <h2 id="evaluation-measures">Evaluation Measures</h2>
 <ul>
-  <li><strong>Acc(Accuracy): </strong>: The proportion of identical preference results between the model and human annotations. Specifically, we first convert individual scores (ranks) into pairwise preferences and then calculate consistency with human annotations.</li>
-  <li><strong>Kendall's tau: </strong>: Measures the ordinal association between two ranked variables. $$\tau = \frac{C-D}{\frac{1}{2}n(n-1)}$$
+  <li><strong>Acc(Accuracy): </strong>The proportion of identical preference results between the model and human annotations. Specifically, we first convert individual scores (ranks) into pairwise preferences and then calculate consistency with human annotations.</li>
+  <li><strong>Kendall's tau: </strong>Measures the ordinal association between two ranked variables. $$\tau = \frac{C-D}{\frac{1}{2}n(n-1)}$$
     where:
     C is the number of concordant pairs,
     D is the number of discordant pairs,
     n is the number of pairs.</li>
-  <li><strong>Spearman's Rank Correlation Coefficient </strong>: Measures the strength and direction of the association between two ranked variables. $$\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}$$
+  <li><strong>Spearman's Rank Correlation Coefficient </strong>Measures the strength and direction of the association between two ranked variables. $$\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}$$
     where:
     \(d_i\) is the difference between the ranks of corresponding elements in the two lists,
     n is the number of elements.</li>
